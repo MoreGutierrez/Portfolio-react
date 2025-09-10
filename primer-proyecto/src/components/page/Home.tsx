@@ -1,5 +1,6 @@
 import './Home.css';
 import { Linkedin, Github } from 'react-bootstrap-icons';
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
             <a href="#"><Github /></a>
           </div>
 
-          <a href="#contact" className="btn">Contact Me</a>
+          <Link to="/contact" className="btn">Contact Me</Link>
         </div>
       </section>
     </main>
