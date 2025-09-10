@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+:root{
+    --bg-color: #ccc0aa;
+    --sutil-color: #9b958a;
+    --snd-bg-color: #ffffff;
+    --text-color: #eae7d8;
+    --span-color: #6c727a;
+    --main-color: #4e5568;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
+/*========== HEADER SECTION CODE ==========*/
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.navbar a{
+    font-size: 1.9rem;
+    color:  var(--bg-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.navbar a:hover, .navbar a.active{
+    color: var(--sutil-color);
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    background-color: var(--sutil-color);
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+#menu-icon{
+    display: none;
+    font-size: 3.6rem;
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 25px var(--span-color);
+}
+
+
+/*=============== TITULOS ===============*/
+.heading h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 4rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 3rem;
+}
+
+.heading span{
+    color: var(--span-color);
+}
+
+/*========== FOOTER SECTION CODE ==========*/
+
+footer{
+    width: 100%;
+    padding: 2rem 5%;
+    text-align: center;
+    background: var(--main-color);
+}
+
+
+footer p {
+    font-size: 1.4rem;
+    color: var(--bg-color);
+    margin: 0;
+    font-weight: 700;
+}
